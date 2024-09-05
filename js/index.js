@@ -1,7 +1,7 @@
 /* <======================= Product 1 ======================> */
 
-let producNameInsert1 = ("Lo Kike");
-let productPriceInsert1 = ("3000$")
+let producNameInsert1 = ("Nike Air force");
+let productPriceInsert1 = ("100$")
 let productDescriptionInsert1 = ("Unos nike air force re facheros que te dal un flow tremendo")
 let imageLink1 = 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4f37fca8-6bce-43e7-ad07-f57ae3c13142/AIR+FORCE+1+%2707.png'
 
