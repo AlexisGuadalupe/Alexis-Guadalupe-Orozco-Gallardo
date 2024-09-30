@@ -22,7 +22,7 @@ for (let i = 1; i < 10; i++) {
         description = "Pov:"
     }
     else{
-        title = "BMW M5"
+        title = "Gta 5"
         pricing = 500
         description = "xd"
     }
@@ -34,7 +34,7 @@ for (let i = 1; i < 10; i++) {
             <p class="product-pricing" id="">${pricing}</p>
             <p class="product-description" id="">${description}</p>
             <div class="produc-button-container">
-                <button class="product-button">Agregar al carrito</button>
+                <a href="pages/productos/producto${i}.html" class="product-button">Ver mas</a>
             </div>
         </div>`);
     document.getElementById("product-container").innerHTML = cardArray.join().replaceAll(",","");
