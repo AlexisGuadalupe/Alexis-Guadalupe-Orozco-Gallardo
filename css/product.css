@@ -24,12 +24,11 @@ body{
 
 .card{
     background-color: #000000;
-    width: 80%;
-    height: 70vh;
+    width: 1200px;
+    height: 600px;
     border-radius: 30px;
     position: relative;
     margin-top: 30px;
-    margin-left: 30px;
     margin-bottom: 30px;
     border: 2px solid #fff;
     color: #fff;
@@ -66,45 +65,66 @@ body{
 
 /* Creando la forma de la card */
 
-.product-card-img{
-    width: 50%;
-    height: 70vh;
-    background-color: #f0f;
-    object-fit: cover;
-    border-radius: 30px;
+.contain-information-card{
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-.contain-information-card{
-    width: 50%;
-    margin: 20px;
+.product-card-img{
+    width: 700px;
+    object-fit: cover;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    mask-image: linear-gradient(to right,black 90%, transparent);
 }
 
 .product-card-title{
-    font-size: 30px;
-    margin-bottom: 25px;
-}
-
-.product-card-pricing{
-    font-size: 30px;
-    color: #cfcfcf;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .product-card-description{
     margin-top: 30px;
     margin-bottom: 30px;
-    width: 100%;
-    height: 50%;
+    font-size: 20px;
+    max-width: 460px;
+    overflow: hidden;
+    word-wrap: break-word;
+    height: 100px;
+}
+
+.product-card-year{
+    margin-bottom: 30px;
+    font-size: 20px;
+    color: #ffffff;
+    border: 1px solid #fff;
+    width: 150px;
+    text-align: center;
+    display: inline-block;
+}
+
+.product-card-pricing{
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: rgb(165, 248, 155);
+}
+
+.product-card-stock{
+    margin-bottom: 30px;
+    font-size: 20px;
 }
 
 .button{
     width: 100%;
     display: flex;
-    justify-content: center;
 }
 
 .product-card-comprar{
-    width: 90%;
+    width: 100%;
     height: 40px;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
+    margin-top: 150px;
+    cursor: pointer;
 }
