@@ -265,3 +265,26 @@ body{
 .product-container-title{
     color: #fff;
 }
+
+/* busquerda de producto */
+
+.search-container{
+    display: flex;
+}
+
+.search-input{
+    outline: none;
+    border: none;
+    width: 480px;
+    border-radius: 40px;
+    background-color: #4c4b4b;
+    border: 1px solid #fff;
+    padding: 20px;
+    color: #fff;
+}
+
+.seach-button{
+    position: absolute;
+    left: 400px;
+    top: 102vh ;
+}
