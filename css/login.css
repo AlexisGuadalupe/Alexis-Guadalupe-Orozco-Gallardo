@@ -1,0 +1,26 @@
+body, h1, h2, h3, h4, h5, h6, ul, ol{
+    padding: 0; 
+    margin: 0;
+    font-family: sans-serif;
+} 
+
+p{
+    margin: 0;
+}
+
+.submit{
+
+}
+
+.login-title{
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f00;
+    width: 400px;
+    height: 500px;
+}

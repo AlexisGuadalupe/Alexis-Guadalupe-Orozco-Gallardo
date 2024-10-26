@@ -91,11 +91,11 @@ const data = [
     }
 ];
 
+
+
 productoid = window.location.search.split("=")[1]
 
 const productoInfo = data.find((producto) => producto.id == productoid)
-
-console.log(productoInfo)
 
 cardIndividualCard = [`
             <img class="product-card-img" src="${productoInfo.imagen}" alt="">
@@ -105,6 +105,8 @@ cardIndividualCard = [`
                 <p class="product-card-year">Año: ${productoInfo.año}</p>
                 <p class="product-card-pricing">${productoInfo.precio}$</p>
                 <p class="product-card-stock">!!Solo quedan ${productoInfo.stock}!!</p>
+                <label for="number">Cantidad:</label>
+                <input class="input_number" id="number" type="number" min="1" max="20" name="" id="">
                 <div class="button">
                     <button onclick="Comprado()" class="product-card-comprar">Comprar</button>
                 </div>
@@ -112,3 +114,11 @@ cardIndividualCard = [`
             `]
 
 document.querySelector("#card").innerHTML = cardIndividualCard.join("").replaceAll(",", "");
+
+function Comprado(){
+    let confirmationBuy = confirm(`Quieres comprar el ${productoInfo.modelo}`)
+
+    if (confirmationBuy === true) {
+        alert("Comprado exitisamente")
+    }
+}
