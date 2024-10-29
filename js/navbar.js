@@ -42,7 +42,7 @@ function unionDelaNavbar(){
     
         <nav class="carrito-and-login all-width">
             <ul id="secundary-nav" class="carrito-and-login-list">
-            ${menuArray2} ${localStorage.getItem("usuario") ? `<li class="carrito-and-login-link" style="color: #fff;">Hola ${localStorage.getItem("usuario")}</li>` : `<li class="carrito-and-login-item"><a href="pages/loging.html" class="carrito-and-login-link">Ingresar</a></li>`}
+            ${menuArray2} ${localStorage.getItem("usuario") ? `<li class="carrito-and-login-link" style="color: #fff;">Hola ${localStorage.getItem("usuario")}</li> <li><button onclick="localStorage.clear();">Cerrar sesión</button></li>` : `<li class="carrito-and-login-item"><a href="../pages/loging.html" class="carrito-and-login-link">Ingresar</a></li>`}
             </ul>
         </nav>
         `

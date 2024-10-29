@@ -204,7 +204,7 @@ function crearCards(){
             <p class="product-pricing" id="">${carro.precio}</p>
             <p class="product-description" id="">${carro.descripción}</p>
             <div class="produc-button-container">
-                <a href="pages/productos/producto1.html?prod=${carro.id}" class="product-button">Ver mas</a>
+                <a href="pages/producto1.html?prod=${carro.id}" class="product-button">Ver mas</a>
             </div>
         </div>`
     ));
