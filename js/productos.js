@@ -105,10 +105,7 @@ cardIndividualCard = [`
                 <p class="product-card-year">Año: ${productoInfo.año}</p>
                 <p class="product-card-pricing">${productoInfo.precio}$</p>
                 <p class="product-card-stock">!!Solo quedan ${productoInfo.stock}!!</p>
-                ${localStorage.getItem("usuario") ? `<label for="number">Cantidad:</label><input class="input_number" id="number" type="number" min="1" max="${productoInfo.stock}" name="" id="">` : ``}
-                <div class="button">
-                    <button onclick="Comprado()" class="product-card-comprar">Comprar</button>
-                </div>
+                ${localStorage.getItem("usuario") ? `<label for="number">Cantidad:</label><input class="input_number" id="number" type="number" min="1" max="${productoInfo.stock}" name="" ><div class="button"><button onclick="Comprado()" class="product-card-comprar">Comprar</button></div>` : ``}
             </div>
             `]
 
@@ -117,12 +114,4 @@ document.querySelector("#card").innerHTML = cardIndividualCard.join("").replaceA
 
 /* Carrito */
 
-let inputCantidadDeCarros = document.querySelector("#number").value = (1)
-
-function Comprado(){
-
-    let productoid = window.location.search.split("=")[1]
-
-    
-}
 

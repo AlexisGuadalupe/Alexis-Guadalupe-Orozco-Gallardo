@@ -204,7 +204,7 @@ function crearCards(){
             <p class="product-pricing" id="">${carro.precio}</p>
             <p class="product-description" id="">${carro.descripción}</p>
             <div class="produc-button-container">
-                <a href="pages/producto1.html?prod=${carro.id}" class="product-button">Ver mas</a>
+                <a href="./producto.html?prod=${carro.id}" class="product-button">Ver mas</a>
             </div>
         </div>`
     ));
@@ -236,7 +236,7 @@ const search = () => {
                 <p class="product-pricing" id="">${producto.precio}</p>
                 <p class="product-description" id="">${producto.descripción}</p>
                 <div class="produc-button-container">
-                    <a href="pages/productos/producto1.html?prod=${producto.id}" class="product-button">Ver mas</a>
+                    <a href="./producto.html?prod=${producto.id}" class="product-button">Ver mas</a>
                 </div>
             </div>`
         ));
@@ -258,7 +258,7 @@ const categoryFunction = (category) => {
                 <p class="product-pricing" id="">${producto.precio}</p>
                 <p class="product-description" id="">${producto.descripción}</p>
                 <div class="produc-button-container">
-                    <a href="pages/productos/producto1.html?prod=${producto.id}" class="product-button">Ver más</a>
+                    <a href="./producto.html?prod=${producto.id}" class="product-button">Ver más</a>
                 </div>
             </div>`
         ));

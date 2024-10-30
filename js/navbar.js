@@ -1,6 +1,6 @@
 let categoriasPrimaryNavbar = [
-    { content: "inicio", href: "http://127.0.0.1:5501/index.html"},
-    { content: "Ofertas", href: "Ofertas.mtml"}
+    { content: "inicio", href: "index.html"},
+    { content: "Ofertas", href: "./Ofertas.html"}
 ]
     
 let menuArray1 = []
@@ -13,7 +13,7 @@ for (const menu of categoriasPrimaryNavbar) {
 
 
 let categoriasSecondaryNavbar = [
-    { content: "Carrito", href: "carrito.html"},
+    { content: "Carrito", href: "./carrito.html"},
     /* { content: "Ingresar", href: "pages/loging.html"} */
 ]
 
@@ -42,7 +42,7 @@ function unionDelaNavbar(){
     
         <nav class="carrito-and-login all-width">
             <ul id="secundary-nav" class="carrito-and-login-list">
-            ${menuArray2} ${localStorage.getItem("usuario") ? `<li class="carrito-and-login-link" style="color: #fff;">Hola ${localStorage.getItem("usuario")}</li> <li><button onclick="localStorage.clear();">Cerrar sesión</button></li>` : `<li class="carrito-and-login-item"><a href="../pages/loging.html" class="carrito-and-login-link">Ingresar</a></li>`}
+            ${menuArray2} ${localStorage.getItem("usuario") ? `<li class="carrito-and-login-link" style="color: #fff;">Hola ${localStorage.getItem("usuario")}</li> <li><button onclick="localStorage.clear();">Cerrar sesión</button></li>` : `<li class="carrito-and-login-item"><a href="./login.html" class="carrito-and-login-link">Ingresar</a></li>`}
             </ul>
         </nav>
         `
