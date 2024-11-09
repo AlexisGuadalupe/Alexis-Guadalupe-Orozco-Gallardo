@@ -6,8 +6,7 @@ const data = [
         descripción: "Un sedán compacto confiable y eficiente en combustible.",
         stock: 12,
         precio: 20000,
-        imagen: "https://img.remediosdigitales.com/e5d8bc/toyota-corolla-2020_/1366_2000.jpg",
-        quantity: 0,
+        imagen: "https://img.remediosdigitales.com/e5d8bc/toyota-corolla-2020_/1366_2000.jpg"
     },
     {
         id: 2,
@@ -91,80 +90,3 @@ const data = [
         imagen: "https://www.hyundai.com/content/dam/hyundai/template_en/en/images/find-a-car/pip/tucson-2021/highlights/gallery/tucson-nx4-highlights-gallery-01-pc.jpg"
     }
 ];
-
-
-
-let productoid = window.location.search.split("=")[1]
-
-const productoInfo = data.find((producto) => producto.id == productoid)
-
-cardIndividualCard = [`
-            <img class="product-card-img" src="${productoInfo.imagen}" alt="">
-            <div class="contain-information-card">
-                <h2 class="product-card-title">${productoInfo.modelo}</h2>
-                <p class="product-card-description">${productoInfo.descripción}</p>
-                <p class="product-card-year">Año: ${productoInfo.año}</p>
-                <p class="product-card-pricing">${productoInfo.precio}$</p>
-                <p class="product-card-stock">!!Solo quedan ${productoInfo.stock}!!</p>
-                ${localStorage.getItem("usuario") ? `<label for="number">Cantidad:</label> <div class="add-and-decrease"><button class="add-and-decrease-button" onclick="increaseItem()">+</button> <input class="input_number" id="number" type="number" min="1" max="${productoInfo.stock}" name="" > <button class="add-and-decrease-button" onclick="decreaseItem()">-</button></div> <div class="button"><button onclick="addItems()" class="product-card-comprar">Comprar</button></div>` : ``}
-            </div>
-            `]
-
-document.querySelector("#card").innerHTML = cardIndividualCard.join("").replaceAll(",", "");
-
-/* increase item */
-document.querySelector("#number").value = 1
-let counter = document.querySelector("#number")
-
-function increaseItem(){
-    const idProduct = Number(window.location.search.split("=")[1])
-    const product = data.find(item => item.id === idProduct)
-
-    if (product.stock > counter.value) {
-        counter.value = Number(counter.value) + 1
-    }
-}
-
-function decreaseItem(){
-    if (1 < counter.value) {
-        counter.value = Number(counter.value) - 1
-    }
-}
-
-
-/* Carrito */
-
-function addItems(){
-    let cart = JSON.parse(localStorage.getItem("cart"))
-    const idProduct = Number(window.location.search.split("=")[1])
-    const product = data.find(item => item.id === idProduct)
-    const existeIdEnCart = cart.some(item => item.product.id === idProduct)
-
-    if (existeIdEnCart) {
-        cart = cart.map(item => {
-            if (item.product.id === idProduct) {
-                return { ... item, quantity : item.quantity + Number(counter.value) }
-            } else{
-                return item;
-            }
-        })
-    } else{
-        cart.push({ product: product, quantity: Number(counter.value) })
-    }
-
-    localStorage.setItem("cart", JSON.stringify(cart))
-    document.querySelector("#number").value = 1
-
-    let quantity = cart.reduce((acumulado, actual) => acumulado + actual.quantity, 0)
-
-    localStorage.setItem("quantity", JSON.stringify(quantity))
-
-    Toastify({
-        text:"Felicidades te endeudaste de por vida 😏",
-        style:{
-            background: "#DB5079"
-        },
-    }
-    ).showToast()
-}
-

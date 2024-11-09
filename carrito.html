@@ -1,62 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/carrito.css">
-</head>
-<body>
-    <header class="header">
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avantt Cars</title>
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/navbar.css" />
 
-        <div class="img all-width">
-            <a href="../index.html">
-                <svg viewBox="0 0 256 292" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="29"><defs><linearGradient id="a" x1="68.188%" x2="27.823%" y1="17.487%" y2="89.755%"><stop offset="0%" stop-color="#41873F"/><stop offset="32.88%" stop-color="#418B3D"/><stop offset="63.52%" stop-color="#419637"/><stop offset="93.19%" stop-color="#3FA92D"/><stop offset="100%" stop-color="#3FAE2A"/></linearGradient><linearGradient id="c" x1="43.277%" x2="159.245%" y1="55.169%" y2="-18.306%"><stop offset="13.76%" stop-color="#41873F"/><stop offset="40.32%" stop-color="#54A044"/><stop offset="71.36%" stop-color="#66B848"/><stop offset="90.81%" stop-color="#6CC04A"/></linearGradient><linearGradient id="f" x1="-4.389%" x2="101.499%" y1="49.997%" y2="49.997%"><stop offset="9.192%" stop-color="#6CC04A"/><stop offset="28.64%" stop-color="#66B848"/><stop offset="59.68%" stop-color="#54A044"/><stop offset="86.24%" stop-color="#41873F"/></linearGradient><path id="b" d="M134.923 1.832c-4.344-2.443-9.502-2.443-13.846 0L6.787 67.801C2.443 70.244 0 74.859 0 79.745v132.208c0 4.887 2.715 9.502 6.787 11.945l114.29 65.968c4.344 2.444 9.502 2.444 13.846 0l114.29-65.968c4.344-2.443 6.787-7.058 6.787-11.945V79.745c0-4.886-2.715-9.501-6.787-11.944L134.923 1.832Z"/><path id="e" d="M134.923 1.832c-4.344-2.443-9.502-2.443-13.846 0L6.787 67.801C2.443 70.244 0 74.859 0 79.745v132.208c0 4.887 2.715 9.502 6.787 11.945l114.29 65.968c4.344 2.444 9.502 2.444 13.846 0l114.29-65.968c4.344-2.443 6.787-7.058 6.787-11.945V79.745c0-4.886-2.715-9.501-6.787-11.944L134.923 1.832Z"/></defs><path fill="url(#a)" d="M134.923 1.832c-4.344-2.443-9.502-2.443-13.846 0L6.787 67.801C2.443 70.244 0 74.859 0 79.745v132.208c0 4.887 2.715 9.502 6.787 11.945l114.29 65.968c4.344 2.444 9.502 2.444 13.846 0l114.29-65.968c4.344-2.443 6.787-7.058 6.787-11.945V79.745c0-4.886-2.715-9.501-6.787-11.944L134.923 1.832Z"/><mask id="d" fill="#fff"><use xlink:href="#b"/></mask><path fill="url(#c)" d="M249.485 67.8 134.65 1.833c-1.086-.542-2.443-1.085-3.529-1.357L2.443 220.912c1.086 1.357 2.444 2.443 3.8 3.258l114.834 65.968c3.258 1.9 7.059 2.443 10.588 1.357L252.47 70.515c-.815-1.086-1.9-1.9-2.986-2.714Z" mask="url(#d)"/><mask id="g" fill="#fff"><use xlink:href="#e"/></mask><path fill="url(#f)" d="M249.756 223.898c3.258-1.9 5.701-5.158 6.787-8.687L130.579.204c-3.258-.543-6.787-.272-9.773 1.628L6.786 67.53l122.979 224.238c1.628-.272 3.529-.815 5.158-1.63l114.833-66.239Z" mask="url(#g)"/></svg>
-            </a>
-        </div>
+    <style>
+    #cart .card .me-4 {
+      width: 180px;
+      overflow: hidden;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+    }
 
-        <nav class="main-nav">
-            <ul class="main-nav-list">
-                <li class="main-nav-item">
-                    <a class="main-nav-link" href="">
-                        <svg fill="#ffffff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 984.27 984.27" xml:space="preserve" stroke="#ffffff" stroke-width="0.00984266"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="19.68532"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M954.765,323.748l-105.896-37.561l20.264-110.437l-112.257,0.864L738.311,65.859l-105.29,39.175L577.542,7.346 l-85.409,72.907L406.724,7.346l-55.478,97.686l-105.29-39.176l-18.565,110.756l-112.256-0.864l20.264,110.438L29.502,323.748 l56.978,96.837L0,492.132l86.479,71.548l-56.978,96.837l105.896,37.562l-20.264,110.437l112.257-0.864l18.565,110.756 l105.291-39.176l55.479,97.688l85.409-72.908l85.409,72.907l55.478-97.688l105.29,39.177l18.565-110.756l112.257,0.863 l-20.264-110.438l105.896-37.562l-56.978-96.837l86.479-71.546l-86.479-71.548L954.765,323.748z M858.797,625.589l-83.857,29.743 l16.07,87.58l-89.074-0.688l-14.72,87.816l-83.39-31.027l-43.939,77.37l-67.754-57.834l-67.753,57.835l-43.94-77.369 l-83.39,31.026l-14.72-87.817l-89.074,0.688l16.07-87.58l-83.856-29.743l45.12-76.682l-68.622-56.775l68.621-56.772 l-45.119-76.685l83.856-29.743l-16.069-87.58l89.074,0.688l14.72-87.816l83.39,31.027l43.939-77.37l67.753,57.834l67.753-57.835 l43.94,77.369l83.39-31.026l14.72,87.817l89.074-0.688l-16.07,87.58l83.856,29.743l-45.119,76.682l68.622,56.775l-68.621,56.771 L858.797,625.589z"></path> <polygon points="392.047,617.613 457.047,617.613 457.047,543.354 507.927,543.354 507.927,478.354 457.047,478.354 457.047,436.596 507.927,436.596 507.927,371.596 392.047,371.596 "></polygon> <polygon points="539.347,617.613 604.347,617.613 604.347,543.354 655.228,543.354 655.228,478.354 604.347,478.354 604.347,436.596 655.228,436.596 655.228,371.596 539.347,371.596 "></polygon> <path d="M220.275,618.742h148.381V371.596H220.275V618.742z M285.275,436.596h18.381v117.146h-18.381V436.596z"></path> <rect x="694.791" y="372.597" width="65" height="146.257"></rect> <rect x="694.791" y="555.484" width="65" height="62.13"></rect> </g> </g> </g></svg>
-                        Ofertas
-                    </a>
-                </li>
-                
-                <li class="main-nav-item">
-                    <a class="main-nav-link" href="">
-                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="#fff"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 9c.852 0 1.297 .986 .783 1.623l-.076 .084l-6 6a1 1 0 0 1 -1.32 .083l-.094 -.083l-6 -6l-.083 -.094l-.054 -.077l-.054 -.096l-.017 -.036l-.027 -.067l-.032 -.108l-.01 -.053l-.01 -.06l-.004 -.057v-.118l.005 -.058l.009 -.06l.01 -.052l.032 -.108l.027 -.067l.07 -.132l.065 -.09l.073 -.081l.094 -.083l.077 -.054l.096 -.054l.036 -.017l.067 -.027l.108 -.032l.053 -.01l.06 -.01l.057 -.004l12.059 -.002z" /></svg>
-                        Categorias
-                    </a>
-                </li>
-            </ul>
-        </nav>
+    #cart .card .me-4 img {
+      width: 100%;
+    }
+    </style>
+  </head>
+  <body id="body">
+    <header id="header" class="header">
 
-        <nav class="carrito-and-login all-width">
-            <ul class="carrito-and-login-list">
-                <li class="carrito-and-login-item">
-                    <a href="pages/carrito.html" class="carrito-and-login-link">
-                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
-                        Carrito
-                    </a>
-                </li>
-                <li class="carrito-and-login-item">
-                    <a href="" class="carrito-and-login-link">
-                        Ingresar
-                    </a>
-                </li>
-            </ul>
-        </nav>
     </header>
 
-    <section class="items-container">
-        <div class="item-card">
-            <img src="" alt="">
-            <h3></h3>
-            <p></p>
-            <input type="number" min="1" max="20" name=""  id="">
+
+    <div class="container pt-4">
+    <div class="row">
+      <div class="col-xl-8">
+				<section id="card-container">
+					
+				</section>
+      <div class="row my-4">
+        <div class="col-sm-6">
+        <button class="btn">Seguir comprando</button>
         </div>
-    </section>
-</body>
-</html>
+        <div class="col-sm-6">
+        <div class="text-sm-end mt-2 mt-sm-0">
+          <button id="btn-checkout" class="btn btn-success">Checkout</button>
+					<button id="btn-checkout" onclick="clearCart()" class="btn btn-success">Eliminar</button>
+        </div>
+        </div>
+      </div>
+      </div>
+      <div class="col-xl-4">
+      <div class="mt-5 mt-lg-0">
+        <div class="card border shadow-none">
+        <div class="card-header bg-transparent border-bottom py-3 px-4">
+          <h5 class="font-size-16 mb-0">Orden de Compra</h5>
+        </div>
+        <div class="card-body p-4 pt-2">
+          <div class="table-responsive">
+          <table class="table mb-0">
+            <tbody>
+            <tr class="bg-light">
+              <th>Total :</th>
+              <td class="text-end">
+              <span class="fw-bold" id="total-de-compra"></span>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+    <script src="js/navbar.js"></script>
+		<script src="js/carrito.js"></script>
+  </body>
+  </html>
