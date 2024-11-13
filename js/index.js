@@ -118,7 +118,7 @@ function crearCards(){
     
     document.querySelector("#product-container").innerHTML = cardArray.join("").replaceAll(",", "");
 }
-crearCards();
+
 
 /* borrar todo */
 
@@ -173,3 +173,12 @@ const categoryFunction = (category) => {
         document.querySelector("#product-container").innerHTML = cardSearchCategory.join("").replaceAll(",", "");
     }
 }
+
+/* Loader */
+let promesaLoading = new Promise((resolve) => {
+    setTimeout(() => {
+        resolve("ok")
+    }, 3000);
+})
+
+promesaLoading.then(result => (crearCards()))
