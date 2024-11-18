@@ -14,7 +14,7 @@ function login(){
         localStorage.setItem("usuario", username);
         localStorage.setItem("quantity", 0);
         localStorage.setItem("cart", JSON.stringify([]));
-        window.location.href = "../index.html";
+        window.location.href = "index.html";
     } else {
         alert("todo mal parece que no sos vos");
         document.getElementById("email").value = "";

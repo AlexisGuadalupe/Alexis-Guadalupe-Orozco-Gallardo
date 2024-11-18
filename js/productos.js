@@ -106,7 +106,7 @@ cardIndividualCard = [`
                 <p class="product-card-year">Año: ${productoInfo.año}</p>
                 <p class="product-card-pricing">${productoInfo.precio}$</p>
                 <p class="product-card-stock">!!Solo quedan ${productoInfo.stock}!!</p>
-                ${localStorage.getItem("usuario") ? `<label for="number">Cantidad:</label> <div class="add-and-decrease"><button class="add-and-decrease-button" onclick="increaseItem()">+</button> <input class="input_number" id="number" type="number" min="1" max="${productoInfo.stock}" name="" > <button class="add-and-decrease-button" onclick="decreaseItem()">-</button></div> <div class="button"><button onclick="addItems()" class="product-card-comprar">Comprar</button></div>` : ``}
+                ${localStorage.getItem("usuario") ? `<label for="number">Cantidad:</label> <div class="add-and-decrease"><button class="add-and-decrease-button" onclick="increaseItem()">+</button> <input class="input_number" id="number" type="number" min="1" max="${productoInfo.stock}" name="" > <button class="add-and-decrease-button" onclick="decreaseItem()">-</button></div> <div class="button"><button onclick="addItems()" class="product-card-comprar">Comprar</button></div>` : `<a href="login.html" class="product-card-comprar-link">Iniciar sesión para comprar</a></div>`}
             </div>
             `]
 
@@ -130,7 +130,6 @@ function decreaseItem(){
         counter.value = Number(counter.value) - 1
     }
 }
-
 
 /* Carrito */
 
@@ -167,4 +166,3 @@ function addItems(){
     }
     ).showToast()
 }
-

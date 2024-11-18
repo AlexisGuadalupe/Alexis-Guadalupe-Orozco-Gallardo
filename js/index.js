@@ -178,7 +178,7 @@ const categoryFunction = (category) => {
 let promesaLoading = new Promise((resolve) => {
     setTimeout(() => {
         resolve("ok")
-    }, 3000);
+    }, 1000);
 })
 
 promesaLoading.then(result => (crearCards()))

@@ -87,6 +87,7 @@ p{
     margin-right: 20px;
     padding: 10px 10px;
     border-radius: 10px;
+    font-size: 17px;
     height: 20px;
     box-shadow: inset 0 6px 12px #4c64d2, 0 0 17px rgba(110, 137, 255, .77), inset 0 1px 1px #ffffff8c;
     transition-property: scale, box-shadow;
@@ -94,5 +95,35 @@ p{
 }
 
 .carrito-and-login-link:hover{
+    box-shadow: inset 0 6px 12px #4c64d2, 0 0 17px rgba(110, 137, 255, .77), inset 0 1px 1px #ffffff8c, 0 0 50px #0055ff;
+}
+
+.cart-navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.close-sesion-button{
+    color: #ffffff;
+    text-decoration: none;
+    background: linear-gradient(180deg,#3152df95,#1e254595);
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: none;
+    height: 40px;
+    font-size: 17px;
+    box-shadow: inset 0 6px 12px #4c64d2, 0 0 17px rgba(110, 137, 255, .77), inset 0 1px 1px #ffffff8c;
+    transition-property: scale, box-shadow;
+    transition-duration: 500ms;
+    cursor: pointer;
+}
+
+.close-sesion-button:hover{
     box-shadow: inset 0 6px 12px #4c64d2, 0 0 17px rgba(110, 137, 255, .77), inset 0 1px 1px #ffffff8c, 0 0 50px #0055ff;
 }

@@ -120,7 +120,7 @@ body{
     display: flex;
 }
 
-.product-card-comprar{
+.product-card-comprar, .product-card-comprar-link{
     width: 450px;
     height: 40px;
     border: none;

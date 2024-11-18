@@ -1,5 +1,5 @@
 let categoriasPrimaryNavbar = [
-    { content: "inicio", href: "index.html"},
+    { content: "Inicio", href: "index.html"},
     { content: "Ofertas", href: "./Ofertas.html"}
 ]
     
@@ -42,7 +42,7 @@ function unionDelaNavbar(){
     
         <nav class="carrito-and-login all-width">
             <ul id="secundary-nav" class="carrito-and-login-list">
-            ${menuArray2} ${localStorage.getItem("usuario") ? `<li class="carrito-and-login-link" style="color: #fff;">Hola ${localStorage.getItem("usuario")}</li> <span style="color: #fff;">|</span><li><img style="color: #fff;" height="25" src="./assets/cart.png" alt="Comprar"/><b style="color: #fff;">${localStorage.getItem("quantity")}<b></li><span> </ span> <li><button onclick="localStorage.clear(); location.reload();">Cerrar sesión</button></li>` : `<li class="carrito-and-login-item"><a href="./login.html" class="carrito-and-login-link">Ingresar</a></li>`}
+            ${menuArray2} ${localStorage.getItem("usuario") ? `<li class="carrito-and-login-link" style="color: #fff;">Hola ${localStorage.getItem("usuario")}</li> <span style="color: #fff;">|</span><li class="cart-navbar"><img style="color: #fff;" height="25" src="images/shopping-cart.svg" alt="Comprar"/><b style="color: #fff;">${localStorage.getItem("quantity")}<b></li><span> </ span> <li><button class="close-sesion-button" onclick="localStorage.clear(); location.reload();">Cerrar sesión</button></li>` : `<li class="carrito-and-login-item"><a href="./login.html" class="carrito-and-login-link">Ingresar</a></li>`}
             </ul>
         </nav>
         `
