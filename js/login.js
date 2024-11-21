@@ -1,7 +1,7 @@
 const credenciales = {
-    email: "papaconjamon@gmail.com",
+    email: "exaple@gmail.com",
     password: "123456",
-    username: "nones"
+    username: "Ususario 🗿"
 };
 
 function login(){

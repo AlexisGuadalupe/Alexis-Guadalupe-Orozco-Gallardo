@@ -9,102 +9,149 @@ p{
     margin: 0;
 }
 
-/* <======================== definiendo la forma de la navbar ========================> */
-.header{
-    display: flex;
-    justify-content: space-between;
-    height: 70px;
-    backdrop-filter: blur(10px);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-
-.main-nav-list, .carrito-and-login-list{
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
-
-.carrito-and-login-list{
-    justify-content: end;
-}
-
-.img{
-    display: flex;
-    align-items: center;
-    height: 100%;
-    margin-left: 20px;
-}
-
-.all-width{
-    flex-grow: 1;
-    flex-basis: 0;
-}
-
-.main-nav-link{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-/* <======================== Agregando estetica a la navbar ========================>*/
-
-.main-nav-list{
-    gap: 20px;
-}
-
-.main-nav-link{
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.main-nav-item:hover, .carrito-and-login-link:hover, .img svg:hover{
-    transition: scale 500ms;
-}
-
-.main-nav-item:hover, .carrito-and-login-link:hover, .img svg:hover{
-    scale: 1.1;
-}
-
-.carrito-and-login-list{
-    text-decoration: none;
-}
-
-/* <============================ secondary navbar ===============================> */
-
-.carrito-and-login-link{
-    color: #ffffff;
-    text-decoration: none;
-    background: linear-gradient(180deg,#3152df95,#1e254595);
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-    padding: 10px 10px;
-    border-radius: 10px;
-    height: 20px;
-    box-shadow: inset 0 6px 12px #4c64d2, 0 0 17px rgba(110, 137, 255, .77), inset 0 1px 1px #ffffff8c;
-    transition-property: scale, box-shadow;
-    transition-duration: 500ms;
-}
-
-.carrito-and-login-link:hover{
-    box-shadow: inset 0 6px 12px #4c64d2, 0 0 17px rgba(110, 137, 255, .77), inset 0 1px 1px #ffffff8c, 0 0 50px #0055ff;
-}
-
-/* <============================ cards ======================================> */
-
-.items-container{
-    height: 100vh;
+body{
+    background-color: #000;
     background: linear-gradient(to top, #0a217dff 0%, #000000ff 55%);
-    display: flex;
-    align-items: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 100vh;
 }
 
-.item-card{
-    width: 50%;
-    height: 150px;
-    background-color: #f00;
+.section{
+    margin-top: 80px;
 }
+
+.bordes{
+    box-shadow: 1px 0px 20px #2b00ff;
+    border: 1px solid #2b00ff;
+}
+
+/* estilando el comprar buttons */
+
+.buy-buttons-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+
+}
+
+.buy-delete-buttons-button{
+    background-color: #000000;
+    border: none;
+    color: #fff;
+    width: 95px;
+    height: 40px;
+    border-radius: 40px;
+    cursor: pointer;
+    }
+
+/* estilado el orde de compra */
+
+.orden-de-compra{
+    background-color: #000;
+    width: 356px;
+    height: 132px;
+    border-radius: 15px;
+    color: #fff;
+}
+
+.orden-de-compra-total{
+    display: flex; 
+    justify-content: space-around;
+    color: #000;
+    border-radius: 10px;
+    background-color: rgb(246,247,249);
+}
+
+.orden-de-compra-p{
+    font-size: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #bababa;
+}
+
+.orden-de-compra-total{
+    background-color: #f8f9fa;
+    margin: 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #bababa;
+}
+
+/* forma del layaut */
+
+.section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.car-container-and-buy-buttons-and-products{
+    width: 60%;
+}
+
+    /* cards */
+
+    .card{
+        border-radius: 10px;
+        width: 700px;
+        height: 160px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #000000;
+        color: #fff;
+    }
+    
+    .info-card{
+        display: flex;
+        align-items: center;
+        justify-content: space-b;
+        height: 100px;
+    }
+    
+    .car-image{
+        object-fit: cover;
+        width: 150px;
+        height: 90px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px #000;
+    }
+    
+    .cantidades{
+        display: flex;
+        justify-content: space-around;
+    
+    }
+    
+    .container-cantidades-nombre{
+        width: 500px;
+    }
+    
+    .nombre-del-carro{
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+    
+    .delete-button{
+        width: 90%;
+        height: 30px;
+        border: none;
+        border-radius: 20px;
+        background-color: rgb(246,247,249);
+        color: #000000;
+        cursor: pointer;
+        margin-top: 12px;
+    }
+
+    .card-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-container{
+        display: flex;
+        flex-direction: column;
+    }

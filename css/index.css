@@ -185,6 +185,7 @@ body{
 
 .search-container{
     display: flex;
+    margin-top: 20px;
 }
 
 .search-input{
@@ -199,9 +200,43 @@ body{
 }
 
 .seach-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    left: 400px;
-    top: 102vh ;
+    left: 430px;
+    top: 104vh ;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.seach-delete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 470px;
+    top: 104vh ;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.category-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    gap: 15px;
+}
+
+.category-button{
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 /* Loading */
